@@ -7,14 +7,17 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-export const Login = () => {
+export const Register = () => {
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <TextInput style={styles.input} placeholder="Email"></TextInput>
         <TextInput style={styles.input} placeholder="Password"></TextInput>
+        <TextInput
+          style={styles.input}
+          placeholder="Confirm Password"></TextInput>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Login</Text>
+          <Text style={styles.buttonText}>Create Account</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -33,7 +36,7 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'space-between',
-    height: '20%',
+    height: '25%',
   },
   input: {
     paddingVertical: 10,
@@ -57,4 +60,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default Register;

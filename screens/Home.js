@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, Text, ImageBackground, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  ImageBackground,
+  TouchableOpacity,
+  StyleSheet,
+} from 'react-native';
 
 const Home = ({navigation}) => {
   return (
@@ -10,10 +16,14 @@ const Home = ({navigation}) => {
         <View style={styles.container}>
           <Text style={styles.header}>React Native Instagram Clone</Text>
           <View style={styles.buttonsContainer}>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')} >
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate('Login')}>
               <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')} >
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate('Register')}>
               <Text style={styles.buttonText}>Register</Text>
             </TouchableOpacity>
           </View>
@@ -27,11 +37,12 @@ const styles = StyleSheet.create({
   container: {
     height: '100%',
     alignItems: 'center',
+    paddingTop: 50,
   },
   header: {
     marginTop: 50,
     fontFamily: 'Raleway-Bold',
-    fontSize: 20
+    fontSize: 20,
   },
   buttonsContainer: {
     height: '80%',
@@ -45,12 +56,12 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 15,
     alignItems: 'center',
-    margin: 15
+    margin: 15,
   },
   buttonText: {
     fontFamily: 'Raleway',
-    color: '#E8EAED'
-  }
+    color: '#E5E5E5',
+  },
 });
 
 export default Home;
