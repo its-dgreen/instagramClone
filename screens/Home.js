@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ImageBackground, TouchableOpacity} from 'react-native';
+import {View, Text, ImageBackground, TouchableOpacity, StyleSheet} from 'react-native';
 
 const Home = ({navigation}) => {
   return (
@@ -7,15 +7,50 @@ const Home = ({navigation}) => {
       <ImageBackground
         source={require('../assets/images/circles.jpg')}
         style={{width: '100%', height: '100%'}}>
-        <View>
-          <Text>React Native Instagram Clone</Text>
-          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-            <Text>Solarized</Text>
-          </TouchableOpacity>
+        <View style={styles.container}>
+          <Text style={styles.header}>React Native Instagram Clone</Text>
+          <View style={styles.buttonsContainer}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')} >
+              <Text style={styles.buttonText}>Login</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')} >
+              <Text style={styles.buttonText}>Register</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </ImageBackground>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    height: '100%',
+    alignItems: 'center',
+  },
+  header: {
+    marginTop: 50,
+    fontFamily: 'Raleway-Bold',
+    fontSize: 20
+  },
+  buttonsContainer: {
+    height: '80%',
+    width: '80%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
+    backgroundColor: '#4C97F1',
+    width: '100%',
+    padding: 10,
+    borderRadius: 15,
+    alignItems: 'center',
+    margin: 15
+  },
+  buttonText: {
+    fontFamily: 'Raleway',
+    color: '#E8EAED'
+  }
+});
 
 export default Home;
