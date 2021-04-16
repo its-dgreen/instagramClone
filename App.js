@@ -7,6 +7,7 @@ import 'react-native-gesture-handler';
 import Home from './screens/Home';
 import Login from './screens/Login';
 import Register from './screens/Register';
+import Feed from './screens/Feed';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,11 @@ const App = () => {
         />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen
+          name="Feed"
+          component={Feed}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

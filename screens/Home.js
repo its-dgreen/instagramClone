@@ -14,7 +14,7 @@ const Home = ({navigation}) => {
         source={require('../assets/images/circles.jpg')}
         style={{width: '100%', height: '100%'}}>
         <View style={styles.container}>
-          <Text style={styles.header}>React Native Instagram Clone</Text>
+          <Text style={styles.header}>Instagramish</Text>
           <View style={styles.buttonsContainer}>
             <TouchableOpacity
               style={styles.button}
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
   },
   header: {
     marginTop: 50,
-    fontFamily: 'Raleway-Bold',
-    fontSize: 20,
+    fontFamily: 'BillionDreams',
+    fontSize: 80,
   },
   buttonsContainer: {
     height: '80%',

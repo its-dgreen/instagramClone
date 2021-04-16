@@ -5,12 +5,16 @@ import {
   TextInput,
   View,
   TouchableOpacity,
+  KeyboardAvoidingView,
 } from 'react-native';
 
 export const Register = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.inputContainer}>
+      <Text style={styles.header}>Instagramish</Text>
+      <KeyboardAvoidingView
+        style={styles.inputContainer}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
         <TextInput style={styles.input} placeholder="Email"></TextInput>
         <TextInput style={styles.input} placeholder="Password"></TextInput>
         <TextInput
@@ -19,7 +23,7 @@ export const Register = () => {
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Create Account</Text>
         </TouchableOpacity>
-      </View>
+      </KeyboardAvoidingView>
     </View>
   );
 };
@@ -32,10 +36,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: '100%',
   },
+  header: {
+    marginTop: 50,
+    fontFamily: 'BillionDreams',
+    fontSize: 80,
+    flex: 1,
+  },
   inputContainer: {
+    flex: 2,
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'space-between',
     height: '25%',
   },
   input: {
@@ -46,6 +56,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderColor: '#C0C0C0',
     borderWidth: 1,
+    marginVertical: 5,
   },
   button: {
     backgroundColor: '#4C97F1',
@@ -53,6 +64,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 15,
     alignItems: 'center',
+    marginTop: 5,
   },
   buttonText: {
     fontFamily: 'Raleway',
